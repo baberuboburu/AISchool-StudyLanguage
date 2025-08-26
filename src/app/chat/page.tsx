@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+export const runtime = 'edge';
 
 // モックAPIエンドポイントとキー（実際は環境変数に入れる）
 const API_URL = "https://api.dify.ai/v1/chat-messages";
