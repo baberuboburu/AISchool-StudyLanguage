@@ -8,7 +8,7 @@ export const runtime = 'edge';
 
 // モックAPIエンドポイントとキー
 const API_URL = "https://api.dify.ai/v1/chat-messages";
-const API_KEY = process.env.DIFY_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_DIFY_API_KEY;
 
 type Message = {
   role: 'user' | 'ai';
