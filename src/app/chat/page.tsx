@@ -6,7 +6,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 export const dynamic = 'force-dynamic';
 export const runtime = 'edge';
 
-// モックAPIエンドポイントとキー（実際は環境変数に入れる）
+// モックAPIエンドポイントとキー
 const API_URL = "https://api.dify.ai/v1/chat-messages";
 const API_KEY = process.env.DIFY_API_KEY;
 
