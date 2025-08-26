@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 
+export const dynamic = 'force-dynamic';
+
 // モックAPIエンドポイントとキー（実際は環境変数に入れる）
 const API_URL = "https://api.dify.ai/v1/chat-messages";
 const API_KEY = process.env.NEXT_PUBLIC_DIFY_API_KEY;
@@ -20,7 +22,7 @@ export default function ChatPage() {
   const qtype = searchParams.get('qtype') || '未選択';
 
   const [messages, setMessages] = useState<Message[]>([]);
-  const [input, setInput] = useState('問題を出題してください。');
+  const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [conversationId, setConversationId] = useState<string>('');
 
