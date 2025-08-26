@@ -16,6 +16,7 @@ type Message = {
 };
 
 export default function ChatPage() {
+  console.log(`Dify API Key: ${process.env.DIFY_API_KEY}`)
   const searchParams = useSearchParams();
 
   const language = searchParams.get('language') || '未選択';
